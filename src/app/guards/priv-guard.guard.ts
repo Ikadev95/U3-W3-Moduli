@@ -8,14 +8,14 @@ export class PrivGuardGuard implements CanActivate, CanActivateChild {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): MaybeAsync<GuardResult> {
-    return true;
+    return false;
   }
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): MaybeAsync<GuardResult> {
       const password = 'password'
 
-      return password === 'password'
+      return false
   }
 
 }
