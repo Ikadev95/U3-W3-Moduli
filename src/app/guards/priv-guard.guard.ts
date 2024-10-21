@@ -13,7 +13,9 @@ export class PrivGuardGuard implements CanActivate, CanActivateChild {
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): MaybeAsync<GuardResult> {
-    return true;
+      const password = 'password'
+
+      return password === 'password'
   }
-  
+
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PrivGuardGuard } from './guards/priv-guard.guard';
 
 const routes: Routes = [
   {
@@ -8,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: 'private',
-    loadChildren:() => import('./pages/private/private.module').then (m =>m.PrivateModule)
+    loadChildren:() => import('./pages/private/private.module').then (m =>m.PrivateModule),
+    canActivate: [PrivGuardGuard]
   }
 ];
 
