@@ -1,3 +1,4 @@
+import { ProductSvcService } from './../services/product-svc.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  constructor(private Prodsvc:ProductSvcService){}
+click(){
+ this.Prodsvc.unlock = !this.Prodsvc.unlock
+}
 }

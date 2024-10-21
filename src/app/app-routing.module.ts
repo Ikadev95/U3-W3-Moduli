@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'private',
     loadChildren:() => import('./pages/private/private.module').then (m =>m.PrivateModule),
     canActivate: [PrivGuardGuard]
+  },
+  {
+    path: 'shop',
+    loadChildren:() => import('./pages/shop/shop.module').then (m =>m.ShopModule)
   }
 ];
 
